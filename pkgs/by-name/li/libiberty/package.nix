@@ -36,6 +36,8 @@ stdenv.mkDerivation {
     cp pic/libiberty.a $out/lib*/libiberty.a
   '';
 
+  __structuredAttrs = true;
+
   meta = {
     homepage = "https://gcc.gnu.org/";
     license = lib.licenses.lgpl2;

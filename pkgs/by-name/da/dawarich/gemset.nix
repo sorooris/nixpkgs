@@ -688,17 +688,6 @@
     };
     version = "11.3.1";
   };
-  database_consistency = {
-    dependencies = [ "activerecord" ];
-    groups = [ "development" ];
-    platforms = [ ];
-    source = {
-      remotes = [ "https://rubygems.org" ];
-      sha256 = "0fs7nz3ckyplaxv28nv4xhjdj6fl4ih7jkfjnzgfgphkp5fy5anf";
-      type = "gem";
-    };
-    version = "3.0.5";
-  };
   date = {
     groups = [
       "default"
@@ -1161,32 +1150,6 @@
       type = "gem";
     };
     version = "1.4.2";
-  };
-  gpx = {
-    dependencies = [
-      "csv"
-      "nokogiri"
-      "rake"
-    ];
-    groups = [ "default" ];
-    platforms = [ ];
-    source = {
-      remotes = [ "https://rubygems.org" ];
-      sha256 = "06p5wkyj6lcj01szv22g1jcx8qkkpc4cypj9hdmji9n9h5ipd8bq";
-      type = "gem";
-    };
-    version = "1.2.2";
-  };
-  groupdate = {
-    dependencies = [ "activesupport" ];
-    groups = [ "default" ];
-    platforms = [ ];
-    source = {
-      remotes = [ "https://rubygems.org" ];
-      sha256 = "0405sjsqz2x62g5yghswbsm570xjh1j434p5867c70d9ijhhxy8n";
-      type = "gem";
-    };
-    version = "6.8.0";
   };
   h3 = {
     dependencies = [
@@ -3179,16 +3142,6 @@
       type = "gem";
     };
     version = "3.5.2";
-  };
-  stackprof = {
-    groups = [ "default" ];
-    platforms = [ ];
-    source = {
-      remotes = [ "https://rubygems.org" ];
-      sha256 = "014s1zxlxcw35shislar3y1i3mqa0c6gh3m21js14q1q5zharhjf";
-      type = "gem";
-    };
-    version = "0.2.28";
   };
   stimulus-rails = {
     dependencies = [ "railties" ];

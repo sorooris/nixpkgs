@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "thriftpy2";
   version = "0.7.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Thriftpy";
     repo = "thriftpy2";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-mpCPE1bDE4bpJMwC71QW/4aJs/82/Oj+jYloXOmZyGA=";
   };
 
@@ -33,6 +33,7 @@ buildPythonPackage rec {
   optional-dependencies = {
     aiohttp = [ aiohttp ];
   };
+
   # Not all needed files seems to be present
   doCheck = false;
 
@@ -41,8 +42,8 @@ buildPythonPackage rec {
   meta = {
     description = "Python module for Apache Thrift";
     homepage = "https://github.com/Thriftpy/thriftpy2";
-    changelog = "https://github.com/Thriftpy/thriftpy2/releases/tag/${src.tag}";
+    changelog = "https://github.com/Thriftpy/thriftpy2/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
     maintainers = with lib.maintainers; [ fab ];
   };
-}
+})

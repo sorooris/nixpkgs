@@ -6077,6 +6077,10 @@ self: super: with self; {
 
   fints = callPackage ../development/python-modules/fints { };
 
+  finufft = callPackage ../development/python-modules/finufft {
+    inherit (pkgs) finufft;
+  };
+
   finvizfinance = callPackage ../development/python-modules/finvizfinance { };
 
   fiona = callPackage ../development/python-modules/fiona { };

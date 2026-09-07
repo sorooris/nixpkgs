@@ -81,6 +81,8 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optionals stdenv.hostPlatform.isDarwin [
     (lib.cmakeBool "HAVE_GLES2" false)
+    (lib.cmakeFeature "OPENAL_INCLUDE_DIR" "${openal}/include/AL")
+    (lib.cmakeFeature "OPENAL_LIBRARY" "${openal}/lib/libopenal.dylib")
   ];
 
   desktopItems = lib.optionals stdenv.hostPlatform.isLinux [

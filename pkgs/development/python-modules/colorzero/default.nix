@@ -2,6 +2,7 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  setuptools,
   pkginfo,
   pytestCheckHook,
   pytest-cov-stub,
@@ -10,7 +11,7 @@
 buildPythonPackage rec {
   pname = "colorzero";
   version = "2.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "waveform80";
@@ -18,6 +19,8 @@ buildPythonPackage rec {
     tag = "release-${version}";
     hash = "sha256-0NoQsy86OHQNLZsTEuF5s2MlRUoacF28jNeHgFKAH14=";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ pkginfo ];
 

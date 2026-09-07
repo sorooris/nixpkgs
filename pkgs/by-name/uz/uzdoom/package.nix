@@ -119,6 +119,7 @@ stdenv.mkDerivation (finalAttrs: {
     maintainers = with lib.maintainers; [
       Gliczy
       keenanweaver
+      r4v3n6101
     ];
     platforms = with lib.platforms; linux ++ darwin;
     mainProgram = "uzdoom";

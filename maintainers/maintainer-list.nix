@@ -24565,7 +24565,7 @@
     name = "Robert T. McGibbon";
   };
   rnhmjoj = {
-    email = "rnhmjoj@inventati.org";
+    email = "rnhmjoj@eurofusion.eu";
     matrix = "@rnhmjoj:eurofusion.eu";
     github = "rnhmjoj";
     githubId = 2817565;

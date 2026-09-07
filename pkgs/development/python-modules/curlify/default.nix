@@ -11,6 +11,8 @@ buildPythonPackage {
   version = "2.2.1";
   pyproject = true;
 
+  __structuredAttrs = true;
+
   src = fetchFromGitHub {
     owner = "ofw";
     repo = "curlify";
@@ -21,6 +23,8 @@ buildPythonPackage {
   build-system = [ setuptools ];
 
   dependencies = [ requests ];
+
+  pythonImportsCheck = [ "curlify" ];
 
   meta = {
     description = "Convert python requests request object to cURL command";

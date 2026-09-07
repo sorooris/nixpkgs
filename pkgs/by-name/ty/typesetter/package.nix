@@ -78,7 +78,7 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Minimalist, local-first Typst editor";
     homepage = "https://codeberg.org/haydn/typesetter";
-    license = lib.licenses.gpl3Only;
+    license = lib.licenses.gpl3Plus;
     maintainers = with lib.maintainers; [ GaetanLepage ];
     mainProgram = "typesetter";
   };

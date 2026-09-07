@@ -83,7 +83,7 @@ in
   };
 
   options.system.build.opentelemetryCollectorConfig = mkOption {
-    type = types.package;
+    type = types.path;
     readOnly = true;
     internal = true;
     description = ''
